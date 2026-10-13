@@ -7,10 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "test": "node --experimental-strip-types tests/slotIdResolution.test.ts && node --experimental-strip-types tests/qrPassRendering.test.ts && node --experimental-strip-types tests/checkInFlow.test.ts && node --experimental-strip-types tests/studentAuthFlow.test.ts && node --experimental-strip-types tests/queueAdmissionFlow.test.ts && node --experimental-strip-types tests/courtManagementFlow.test.ts && node --experimental-strip-types tests/slotManagementFlow.test.ts && node --experimental-strip-types tests/headerNavigation.test.ts && node --experimental-strip-types tests/sessionRulesFlow.test.ts",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
+    "qrcode.react": "^4.2.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tailwindcss": "^4.3.3"

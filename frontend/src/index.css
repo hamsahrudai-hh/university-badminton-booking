@@ -2,15 +2,25 @@
 
 :root {
   color-scheme: light;
+  --color-forest: #064E3B;
+  --color-primary-green: #047857;
+  --color-dark-green-hover: #065F46;
+  --color-pale-mint: #ECFDF5;
+  --color-page-bg: #F6F8F7;
+  --color-surface: #FFFFFF;
+  --color-text-main: #172033;
+  --color-text-muted: #64748B;
+  --color-border: #E2E8F0;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #f8fafc;
-  color: #0f172a;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #F6F8F7;
+  color: #172033;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {

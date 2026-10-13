@@ -6,6 +6,11 @@ export interface TimeSlot {
   startTime: string;
   endTime: string;
   label: string;
+  realTimeSlotId?: number;
+  courtSlotMap?: Record<number, number>; // courtNumber or courtId -> database slot ID
+  isoStartTime?: string;
+  isoEndTime?: string;
+  slotDate?: string;
 }
 
 export type SpotStatus = 'available' | 'booked' | 'selected';
@@ -32,15 +37,20 @@ export interface StudentProfile {
   priorityStatus: 'High Priority' | 'Reduced Priority (0 Credits)';
   activeBookingsCount: number;
   nextCreditResetDay: string;
+  numericId?: number;
+  id?: string;
+  isRealAccount?: boolean;
 }
 
 export interface RegisteredStudent {
   id: string;
   name: string;
-  admissionNumber: string;
-  email: string;
+  admissionNumber?: string;
+  email?: string;
   isEligible: boolean;
   hasConflict?: boolean;
+  numericId?: number;
+  weeklyCredits?: number;
 }
 
 export interface GroupPlayerAssignment {
@@ -73,4 +83,5 @@ export interface BookingWizardData {
   courtId: number | null;
   courtName: string | null;
   players: GroupPlayerAssignment[];
+  realTimeSlotId?: number | null;
 }
